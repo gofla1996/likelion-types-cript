@@ -14,8 +14,8 @@
     isMarried: boolean;
     age: number;
   } = {
-    name: '수연',
-    gender: '여성',
+    name: "수연",
+    gender: "여성",
     isMarried: true,
     age: 36,
   };
@@ -26,14 +26,14 @@
 
   // 함수에 직접 전달하는 객체 리터럴의 경우, 타입 검사에 걸려 오류가 발생합니다.
   printGender({
-    name: '현민성',
-    gender: '남성',
+    name: "현민성",
+    gender: "남성",
     age: 29,
   });
 
   const minsung = {
-    name: '현민성',
-    gender: '남성',
+    name: "현민성",
+    gender: "남성",
     age: 29,
   };
 

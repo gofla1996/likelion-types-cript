@@ -29,4 +29,8 @@
 
   // 불리언 타입(boolean type)
   let isWatch = false;
+
+  // message = 19;
+
+  console.log(message);
 }

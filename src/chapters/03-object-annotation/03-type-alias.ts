@@ -15,8 +15,8 @@
     isMarried: boolean;
     age: number;
   } = {
-    name: '수연',
-    gender: '여성',
+    name: "수연",
+    gender: "여성",
     isMarried: true,
     age: 36,
   };
@@ -27,8 +27,8 @@
     isMarried: boolean;
     age: number;
   } = {
-    name: '재호',
-    gender: '남성',
+    name: "재호",
+    gender: "남성",
     isMarried: false,
     age: 24,
   };
@@ -45,15 +45,15 @@
   };
 
   const suyeon: Friend = {
-    name: '수연',
-    gender: '여성',
+    name: "수연",
+    gender: "여성",
     isMarried: true,
     age: 36,
   };
 
   const jaeho: Friend = {
-    name: '재호',
-    gender: '남성',
+    name: "재호",
+    gender: "남성",
     isMarried: false,
     age: 24,
   };
@@ -62,16 +62,15 @@
 // 아래 코드에 반복 사용된 객체 에너테이션을 타입 별칭을 활용하는 코드로 변경해봅니다.
 
 {
+  type Dot = { x: number; y: number };
+
   let point: { x: number; y: number } = { x: 10, y: 10 };
 
   const generatePoint = (x: number, y: number): { x: number; y: number } => {
     return { x, y };
   };
 
-  const powPoint = (porint: {
-    x: number;
-    y: number;
-  }): { x: number; y: number } => {
+  const powPoint = (point: { x: number; y: number }): { x: number; y: number } => {
     return {
       x: point.x ** 2,
       y: point.y ** 2,
@@ -90,7 +89,7 @@
     return { x, y };
   };
 
-  const powPoint = (porint: Point): Point => {
+  const powPoint = (point: Point): Point => {
     return {
       x: point.x ** 2,
       y: point.y ** 2,

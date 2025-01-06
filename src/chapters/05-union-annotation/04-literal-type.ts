@@ -10,18 +10,22 @@
 
 {
   let zero: 0 = 0;
-  zero = -0.000001;
+  // zero = -0.000001;
 
-  let bookIcon: 'book' = 'book';
-  bookIcon = '북';
+  let bookIcon: "book" = "book";
+  // bookIcon = '북';
 }
 
 // 하지만 리터럴 + 유니언을 조합하면 매우 유용한 타입 옵션을 관리할 수 있습니다. 😃
 
 {
-  type IconIds = 'book' | 'send' | 'check-mark' | 'close-eye';
+  type IconIds = "book" | "send" | "check-mark" | "close-eye" | "heart-solid";
+  type Gender = "남성" | "여성";
 
-  let iconType: IconIds = 'send';
-  iconType = 'close-eye';
-  iconType = 'books';
+  let myGender = "여성";
+
+  let iconType: IconIds = "send";
+  iconType = "close-eye";
+  iconType = "book";
+  iconType = "heart-solid";
 }

@@ -7,13 +7,13 @@
 // -----------------------------------------------------------------------------------------
 
 {
-  let notDefined: undefined;
+  let notDefined: undefined = undefined;
 
-  let empty: null;
+  let empty: null = null;
 
-  let serialNumberOfPhone: string = 'SDN-9do1Wed8Az';
+  let serialNumberOfPhone: string = "SDN-9do1Wed8Az";
 
-  let totalPrice: number = 972_000;
+  let totalPrice = 972_000;
 
-  let hasPhoneBeenReleased: boolean = false;
+  let hasPhoneBeenReleased = false;
 }

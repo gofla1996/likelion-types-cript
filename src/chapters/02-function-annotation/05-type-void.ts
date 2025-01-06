@@ -11,17 +11,18 @@
 {
   // 함수의 용도와 다른 반환 값이 존재할 경우,
   // TypeScript는 이를 자동 추론합니다.
-  function printTwice(message: string) {
+  function printTwice(message: string): void {
     console.log(message);
     console.log(message);
-    return '';
+    // return '';
   }
+  printTwice("hello");
 }
 
 {
   // 아래 오류가 발생한 이유는 명시적으로 반환 값의 타입이 void 임을 지정했기 때문입니다.
   function printMessage(message: string): void {
     console.log(message);
-    return '';
+    // return '';
   }
 }

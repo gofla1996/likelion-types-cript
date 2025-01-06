@@ -17,17 +17,18 @@
     hasWheel: boolean;
   }
 
-  interface VerticalTypeMouse {
-    x: number;
-    y: number;
-    hasWheel: boolean;
-    direction: 'Vertial';
+  interface VerticalTypeMouse extends Mouse {
+    direction: "Vertial";
   }
+
+  type VerticalTypeMouseType = Mouse & {
+    direction: "Vertial";
+  };
 
   const myMouse: VerticalTypeMouse = {
     x: 0,
     y: 0,
     hasWheel: false,
-    direction: 'Vertial',
+    direction: "Vertial",
   };
 }

@@ -8,19 +8,20 @@
 // Person 타입을 인터페이스로 변경해 정의 후 다시 열어 정의하는 구문을 작성해봅니다.
 
 {
-  type Person = {
+  interface Person {
     name: string;
     age: number;
-  };
+  }
 
-  type Person = {
-    gender: '남성' | '여성';
+  interface Person {
+    gender: "남성" | "여성";
     job?: string;
-  };
+  }
 
   const hyeji: Person = {
-    name: '류혜지',
+    name: "류혜지",
     age: 12,
-    gender: '여성',
+    gender: "여성",
+    job: "강사",
   };
 }

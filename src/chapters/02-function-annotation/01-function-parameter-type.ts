@@ -8,49 +8,43 @@
 // ---------------------------------------------------------------------------------
 
 {
+  // JS Doc 주석을 사용한 함수 매개변수 타입 지정
   /**
    * 난수를 반환하는 함수
    * ECMAScript(JavaScript) vs. TypeScript
    * @param n number
    */
-  function getRandom(n) {
-    if (typeof n !== 'number') {
-      throw new TypeError(
-        `n 매개변수 타입은 number여야 합니다. (전달 값 타입 ${typeof n})`
-      );
+  function getRandom(n: number) {
+    if (typeof n !== "number") {
+      throw new TypeError(`n 매개변수 타입은 number여야 합니다. (전달 값 타입 ${typeof n})`);
     }
     return Math.floor(Math.random() * n);
   }
 
   getRandom(101);
-  getRandom('101');
-  getRandom('one zero one');
+  // getRandom("101");
+  // getRandom("one zero one");
 
   /**
    * 최솟값, 최댓값 사이의 난수를 반환하는 함수
    * @param min number
    * @param max number
    */
-  function getRandomMinMax(min, max) {
-    min();
-    max.toLowerCase();
+  function getRandomMinMax(min: number, max: number) {
+    // min();
+    // max.toLowerCase();
     return getRandom(max - min) + min;
   }
 
-  getRandomMinMax('min', 'max');
+  getRandomMinMax(10_000, 100_000);
 }
 
 // ---------------------------------------------------------------------------------
 
 {
   // 함수 매개변수 에너테이션이 설정된 경우
-  const sendGreeting = (
-    toName: string,
-    fromName: string,
-    isMorning: boolean,
-    currentYear: number
-  ) => {
-    let thisTime = isMorning ? '오전' : '오후';
+  const sendGreeting = (toName: string, fromName: string, isMorning: boolean, currentYear: number) => {
+    let thisTime = isMorning ? "오전" : "오후";
     return `안녕 ${toName}! 좋은 ${thisTime}이 되길 바라. 행복한 ${currentYear} 한 해가 되길! - 당신의 ${fromName}`;
   };
 

@@ -10,11 +10,11 @@
 
 {
   type Product = {
-    readonly id: string;
+    readonly id: string | number;
   };
 
   const basket: Product = {
-    id: '81730121',
+    id: "81730121",
   };
 
   const cup: Product = {
@@ -35,7 +35,9 @@
     longitude: number;
   };
 
-  let coordinate = { x: 100, y: -201 };
+  type Coordinate = Point | Location;
+
+  let coordinate: Coordinate = { x: 100, y: -201 };
 
   coordinate = {
     latitude: 920.23,

@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------------------
 
 {
-  let anyting: any = 'anyting';
+  let anyting: any = "anyting";
 
   anyting = 120901;
   anyting = false;
@@ -24,20 +24,22 @@
 // -----------------------------------------------------------------------------------------
 
 {
-  const movies = ['리멤버', '인생은 아름다워', '아인보:아마존의 전설'];
+  const movies = ["리멤버", "인생은 아름다워", "아인보:아마존의 전설"];
 
   // 타입 에너테이션이 설정되지 않았으므로 암묵적으로 any 타입이 설정
-  let foundMovie;
+  // let foundMovie;  // 값 할당 안 함 (암시적으로 any 타입 설정)
 
   // 타입 에너테이션을 설정하면 타입 검사를 수행
-  // let foundMovie: string;
+  let foundMovie: string;
 
   for (const movie of movies) {
-    if (movie.indexOf('아마존') > -1) {
+    if (movie.indexOf("아마존") > -1) {
       foundMovie = movie;
     }
   }
 
-  foundMovie();
-  foundMovie = 101;
+  // console.log(foundMovie);
+
+  // foundMovie();
+  foundMovie = 101 + "";
 }

@@ -7,18 +7,18 @@
 
 {
   type Point = {
-    x: number;
-    y: number;
-    z: number;
+    x: number; // 필수 !!! (required)
+    y: number; // 필수 !!! (required)
+    z?: number; // 선택? !!! (required)
   };
 
   const generatePoint = (x: number, y: number): Point => {
     return { x, y };
   };
 
-  const calcPointValues = (point: Point) =>
-    Object.entries(point).reduce((total, [, value]) => total + value, 0);
-
+  const calcPointValues = (point: Point) => {
+    return Object.entries(point).reduce((total, [, value]) => total + value, 0);
+  };
   const anyPoint: Point = { x: 10, y: -20 };
 
   calcPointValues(anyPoint);
